@@ -1,0 +1,54 @@
+{
+  "name": "chat-export-parser",
+  "version": "0.1.0",
+  "description": "Parse ChatGPT and Claude.ai account exports into a normalized conversation format.",
+  "keywords": [
+    "chatgpt",
+    "claude",
+    "export",
+    "parser",
+    "conversations",
+    "chat",
+    "llm"
+  ],
+  "license": "MIT",
+  "author": "Rayane Bouarab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rb24-netizen/chat-export-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rb24-netizen/chat-export-parser/issues"
+  },
+  "homepage": "https://github.com/rb24-netizen/chat-export-parser#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.9"
+  }
+}
